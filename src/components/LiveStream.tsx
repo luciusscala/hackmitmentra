@@ -124,7 +124,7 @@ const LiveStream = () => {
                   <div className="text-center">
                     <Activity className="w-16 h-16 mx-auto mb-4 animate-pulse text-primary" />
                     <p className="text-lg font-semibold">Live Stream Active</p>
-                    <p className="text-sm text-muted-foreground">Broadcasting from Mantra Glasses</p>
+                    <p className="text-sm text-muted-foreground">Broadcasting from Songtra Glasses</p>
                   </div>
                 </div>
               ) : (

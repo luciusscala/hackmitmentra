@@ -83,50 +83,13 @@ const Dashboard = () => {
       </div>
 
       {/* Live Streams */}
-      <Card className="glass-card">
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Camera className="w-5 h-5 text-primary" />
-            Live Streams
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="space-y-4">
-            <div className="flex items-center justify-between p-4 bg-muted/20 rounded-lg border border-glass-border">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center">
-                  <Camera className="w-6 h-6 text-primary-foreground" />
-                </div>
-                <div>
-                  <h3 className="font-semibold status-live">Stream #1 - John's Glasses</h3>
-                  <p className="text-sm text-muted-foreground">Started 12 minutes ago</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-2">
-                <Badge className={`${getStatusColor('live')} text-white`}>
-                  LIVE
-                </Badge>
-                <Button size="sm" variant="outline">
-                  <Play className="w-4 h-4 mr-1" />
-                  Watch
-                </Button>
-              </div>
-            </div>
-            
-            <div className="text-center py-8 text-muted-foreground">
-              <Camera className="w-12 h-12 mx-auto mb-4 opacity-50" />
-              <p>No other active streams</p>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
 
       {/* Recent Videos */}
       <Card className="glass-card">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Video className="w-5 h-5 text-accent" />
-            Recent Videos
+            Recent Songs
           </CardTitle>
         </CardHeader>
         <CardContent>

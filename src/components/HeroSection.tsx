@@ -40,38 +40,29 @@ const HeroSection = () => {
 
           {/* Main Heading */}
           <h1 className="text-6xl md:text-8xl font-bold mb-6 fade-in-up">
-            <span className="gradient-text">MANTRA</span>
+            <span className="gradient-text">AuraTune</span>
           </h1>
           
           <h2 className="text-2xl md:text-3xl font-light mb-8 neon-text fade-in-up">
-            AI-Generated Music Videos from Smart Glasses
+            Add newly gerated music to your songs
           </h2>
 
           {/* Description */}
           <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto fade-in-up">
-            Stream live from smart glasses, let AI generate the perfect soundtrack, 
-            and create cinematic music videos automatically. The future of content creation is here.
+          Take a picture using MENTRA’s open-source smart glasses, let AI generate the perfect soundtrack, and automatically create cinematic visuals. The future of content creation is here.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center fade-in-up">
-            <Button size="lg" className="hover-glow neon-glow">
-              <Play className="w-5 h-5 mr-2" />
-              Start Streaming
-            </Button>
-            <Button variant="outline" size="lg" className="hover-glow">
-              <Sparkles className="w-5 h-5 mr-2" />
-              View Demo
-            </Button>
-          </div>
+  <Button variant="outline" size="lg" className="hover-glow">
+    <Sparkles className="w-5 h-5 mr-2" />
+    View Demo
+  </Button>
+</div>
 
           {/* Features */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
-            <div className="glass-card p-6 hover-glow">
-              <Camera className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Live Streaming</h3>
-              <p className="text-muted-foreground">Real-time RTMP streaming from smart glasses</p>
-            </div>
+            
             <div className="glass-card p-6 hover-glow">
               <Sparkles className="w-12 h-12 text-accent mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">AI Music Generation</h3>
@@ -81,6 +72,11 @@ const HeroSection = () => {
               <Zap className="w-12 h-12 text-neon-purple mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Instant Processing</h3>
               <p className="text-muted-foreground">FFmpeg merges video and audio in real-time</p>
+            </div>
+            <div className="glass-card p-6 hover-glow">
+              <Camera className="w-12 h-12 text-primary mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Live Streaming</h3>
+              <p className="text-muted-foreground">Coming soon...</p>
             </div>
           </div>
         </div>
