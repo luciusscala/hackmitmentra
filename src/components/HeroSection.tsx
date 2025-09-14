@@ -44,7 +44,7 @@ const HeroSection = () => {
           </h1>
           
           <h2 className="text-2xl md:text-3xl font-light mb-8 neon-text fade-in-up">
-            Add newly gerated music to your songs
+            Add original composed music to your pictures
           </h2>
 
           {/* Description */}
