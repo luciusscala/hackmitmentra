@@ -65,3 +65,9 @@
   box-shadow: 0 0 12px rgba(43, 120, 240, 0.6);
 }
 
+.hover-glow:hover {
+  box-shadow: 0 0 8px 2px rgba(59, 130, 246, 0.7); /* Tailwind blue-500 glow */
+  transform: translateY(-2px);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
