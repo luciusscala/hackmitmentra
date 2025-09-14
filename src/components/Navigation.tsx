@@ -22,17 +22,17 @@ const Navigation = ({ activeTab, onTabChange }: NavigationProps) => {
           const Icon = tab.icon;
           return (
             <Button
-              key={tab.id}
-              variant={activeTab === tab.id ? 'default' : 'ghost'}
-              className={`nav-tab ${activeTab === tab.id ? 'active' : ''} hover-glow text-xs md:text-sm px-3 py-2 md:px-6 md:py-3`}
-              onClick={() => {
-                onTabChange(tab.id);      // update active tab state in parent
-                navigate(tab.route);       // navigate to route (must exist in Routes)
-              }}
-            >
+  key={tab.id}
+  variant={activeTab === tab.id ? 'default' : 'ghost'}
+  className={`nav-tab ${activeTab === tab.id ? 'active' : ''} hover-glow text-xs md:text-sm px-3 py-2 md:px-6 md:py-3`}
+  onClick={() => {
+    navigate(tab.route);
+  }}
+>
               <Icon className="w-4 h-4 md:w-5 md:h-5 md:mr-2" />
               <span className="hidden sm:inline">{tab.label}</span>
             </Button>
+            
           );
         })}
       </div>
@@ -41,3 +41,7 @@ const Navigation = ({ activeTab, onTabChange }: NavigationProps) => {
 };
 
 export default Navigation;
+
+
+
+
