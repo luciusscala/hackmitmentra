@@ -1,8 +1,6 @@
-import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Camera, PlayCircle, Library, Settings, Zap, Music } from 'lucide-react';
+import { Library, Zap } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-const navigate = useNavigate();
 
 interface NavigationProps {
   activeTab: string;
@@ -10,44 +8,12 @@ interface NavigationProps {
 }
 
 const Navigation = ({ activeTab, onTabChange }: NavigationProps) => {
-  const tabs = [
-    { id: 'dashboard', label: 'Dashboard', icon: Zap },
-    { id: 'library', label: 'Library', icon: Library },
-  ];
-
-
-const YourComponent = ({ tabs, activeTab, onTabChange }) => {
   const navigate = useNavigate();
 
-  return (
-    <nav className="glass-card p-4 md:p-6 mb-8">
-      <div className="flex flex-wrap gap-2 md:gap-4 justify-center">
-        {tabs.map((tab) => {
-          const Icon = tab.icon;
-          return (
-            <Button
-              key={tab.id}
-              variant={activeTab === tab.id ? "default" : "ghost"}
-              className={`nav-tab ${activeTab === tab.id ? 'active' : ''} hover-glow text-xs md:text-sm px-3 py-2 md:px-6 md:py-3`}
-              onClick={() => {
-                console.log(`Clicking tab: ${tab.id}`);
-                if (tab.route) {
-                  navigate(tab.route);
-                } else {
-                  onTabChange(tab.id);
-                }
-              }}
-            >
-              <Icon className="w-4 h-4 md:w-5 md:h-5 md:mr-2" />
-              <span className="hidden sm:inline">{tab.label}</span>
-            </Button>
-          );
-        })}
-      </div>
-    </nav>
-  );
-};
-  
+  const tabs = [
+    { id: 'dashboard', label: 'Dashboard', icon: Zap, route: '/dashboard' },
+    { id: 'library', label: 'Library', icon: Library, route: '/library' },
+  ];
 
   return (
     <nav className="glass-card p-4 md:p-6 mb-8">
@@ -57,11 +23,11 @@ const YourComponent = ({ tabs, activeTab, onTabChange }) => {
           return (
             <Button
               key={tab.id}
-              variant={activeTab === tab.id ? "default" : "ghost"}
+              variant={activeTab === tab.id ? 'default' : 'ghost'}
               className={`nav-tab ${activeTab === tab.id ? 'active' : ''} hover-glow text-xs md:text-sm px-3 py-2 md:px-6 md:py-3`}
               onClick={() => {
-                console.log(`Clicking tab: ${tab.id}`);
-                onTabChange(tab.id);
+                onTabChange(tab.id);      // update active tab state in parent
+                navigate(tab.route);       // navigate to route (must exist in Routes)
               }}
             >
               <Icon className="w-4 h-4 md:w-5 md:h-5 md:mr-2" />
